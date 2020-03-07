@@ -1,0 +1,1 @@
+../../../HSYMacroKit/HSYMacroKit/Classes/Macro/HSYBundleMacro.h

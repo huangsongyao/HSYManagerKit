@@ -1,0 +1,6 @@
+framework module HSYManagerKit {
+  umbrella header "HSYManagerKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "HSYManagerKit",
+  "version": "0.1.0",
+  "summary": "A short description of HSYManagerKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/huangsongyao/HSYManagerKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "317398895@qq.com": "huangsongyao"
+  },
+  "source": {
+    "git": "https://github.com/huangsongyao/HSYManagerKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HSYManagerKit/Classes/**/*.{h,m}",
+  "dependencies": {
+    "JSONModel": [
+
+    ],
+    "HSYMacroKit": [
+
+    ],
+    "HSYMethodsToolsKit": [
+
+    ],
+    "HSYDatabaseToolsKit": [
+
+    ]
+  }
+}

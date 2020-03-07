@@ -1,0 +1,43 @@
+{
+  "name": "HSYMethodsToolsKit",
+  "version": "0.2.0",
+  "summary": "A short description of HSYMethodsToolsKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/huangsongyao/HSYMethodsToolsKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "317398895@qq.com": "huangsongyao"
+  },
+  "source": {
+    "git": "https://github.com/huangsongyao/HSYMethodsToolsKit.git",
+    "tag": "0.2.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HSYMethodsToolsKit/Classes/**/*.{h,m}",
+  "frameworks": [
+    "UIKit",
+    "Foundation"
+  ],
+  "dependencies": {
+    "JSONModel": [
+
+    ],
+    "SDWebImage": [
+
+    ],
+    "ReactiveObjC": [
+
+    ],
+    "Masonry": [
+
+    ],
+    "HSYMacroKit": [
+
+    ]
+  }
+}

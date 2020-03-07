@@ -1,0 +1,133 @@
+//
+//  NSString+Regular.h
+//  HSYMethodsToolsKit
+//
+//  Created by huangsongyao on 2019/9/26.
+//
+
+#import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+typedef NS_ENUM(NSUInteger, kHSYCocoaKitRegularResult) {
+    
+    kHSYCocoaKitRegularResultConform            = 256,      //符合正则表达式的过滤
+    kHSYCocoaKitRegularResultUnconform,                     //不符合正则表达式的过滤
+    kHSYCocoaKitRegularResultLengthIsZero,                  //长度为零
+    
+};
+
+@interface NSString (Regular)
+
+#pragma mark - Number
+
+/**
+ 正则过滤字符串必须为正整数或者0-decimals位的小数，并且如果字符串格式为@"xxx."或者@".xxx"均不通过，返回kHSYCocoaKitRegularResult结果
+ 
+ @param decimals 小数点后的位数
+ @return 满足条件的kHSYCocoaKitRegularResult枚举类型
+ */
+- (kHSYCocoaKitRegularResult)hsy_isPointNumber:(NSString *)decimals;
+
+/**
+ 正则过滤字符串必须为正整数或者0-decimals位的小数，并且如果字符串格式为@"xxx."或者@".xxx"均不通过
+ 
+ @param decimals 小数点后的位数
+ @return YES表示字符串为正整数或者小数
+ */
+- (BOOL)isPointNumber:(NSString *)decimals;
+
+/**
+ 正则过滤字符串必须为纯数字
+ 
+ @return YES表示字符串为纯数字
+ */
+- (BOOL)isPureNumber;
+
+/**
+ 正则过滤字符串必须为纯数字，返回kHSYCocoaKitRegularResult结果
+ 
+ @return 满足条件的kHSYCocoaKitRegularResult枚举类型
+ */
+- (kHSYCocoaKitRegularResult)hsy_isPureNumber;
+
+/**
+ 正则过滤字符串必须为纯数字，限制该字符串的纯数字的取值范围为：[prefix, suffix] 闭区间
+ 
+ @param prefix 最小取值
+ @param suffix 最大取值
+ @return 是否满足区间取值结果
+ */
+- (BOOL)isPureNumberFromPrefix:(NSString *)prefix suffixNumber:(NSString *)suffix;
+
+/**
+ 正则过滤字符串必须为纯数字，限制该字符串的纯数字的取值范围为：[prefix, suffix] 闭区间，返回kHSYCocoaKitRegularResult结果
+ 
+ @param prefix 最小取值
+ @param suffix 最大取值
+ @return 是否满足区间取值结果，kHSYCocoaKitRegularResult类型
+ */
+- (kHSYCocoaKitRegularResult)hsy_isPureNumberFromPrefix:(NSString *)prefix suffixNumber:(NSString *)suffix;
+
+#pragma mark - Email
+
+/**
+ 正则过滤字符串是否为邮箱
+ 
+ @return YES表示邮箱格式，NO表示否
+ */
+- (BOOL)isEmailAddress;
+
+/**
+ 正则过滤字符串是否为邮箱，返回kHSYCocoaKitRegularResult类型
+ 
+ @return YES表示邮箱格式，NO表示否，kHSYCocoaKitRegularResult类型
+ */
+- (kHSYCocoaKitRegularResult)hsy_isEmailAddress;
+
+#pragma mark - Password
+
+/**
+ 正则过滤字符串是否为通用密码【字母+数字+常用字符】，限制6-16位长度
+ 
+ @return YES or NO
+ */
+- (BOOL)isPassword;
+
+/**
+ 正则过滤字符串是否为通用密码【字母+数字+常用字符】，限制6-16位长度，返回kHSYCocoaKitRegularResult类型
+ 
+ @return YES or NO，kHSYCocoaKitRegularResult类型
+ */
+- (kHSYCocoaKitRegularResult)hsy_isPassword;
+
+/**
+ 正则过滤字符串是否为通用密码【字母+数字+常用字符】，限制prefix-suffix为长度
+ 
+ @param prefix 最小长度
+ @param suffix 最大长度
+ @return YES or NO
+ */
+- (BOOL)isPasswordFromPrefix:(NSString *)prefix suffixNumber:(NSString *)suffix;
+
+/**
+ 正则过滤字符串是否为通用密码【字母+数字+常用字符】，限制prefix-suffix为长度，返回kHSYCocoaKitRegularResult类型
+ 
+ @param prefix 最小长度
+ @param suffix 最大长度
+ @return YES or NO，kHSYCocoaKitRegularResult类型
+ */
+- (kHSYCocoaKitRegularResult)hsy_isPasswordFromPrefix:(NSString *)prefix suffixNumber:(NSString *)suffix;
+
+#pragma mark - Chinese Characters
+
+/**
+ 判断字符串是否为纯中文
+ 
+ @return 是否为纯中文
+ */
+- (BOOL)hsy_isChineseCharacters;
+
+@end
+
+NS_ASSUME_NONNULL_END

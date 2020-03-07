@@ -1,0 +1,6 @@
+framework module HSYDatabaseToolsKit {
+  umbrella header "HSYDatabaseToolsKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

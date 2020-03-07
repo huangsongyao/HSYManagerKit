@@ -1,0 +1,22 @@
+{
+  "name": "HSYMacroKit",
+  "version": "0.1.4",
+  "summary": "A short description of HSYMacroKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/huangsongyao/HSYMacroKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "317398895@qq.com": "huangsongyao"
+  },
+  "source": {
+    "git": "https://github.com/huangsongyao/HSYMacroKit.git",
+    "tag": "0.1.4"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HSYMacroKit/Classes/**/*.{h,m}"
+}
